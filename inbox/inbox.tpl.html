@@ -1,9 +1,14 @@
 <h2>Inbox</h2>
-Filter : <input type="text" ng-model="filterText">
+<div class="form-inline">
+	<div class="form-group">
+		<label>Filter</label>
+		<input type="text" ng-model="filterText" class="form-control">
+	</div>
+</div>
 <div ng-controller='InboxCtrl'>
 	<div class="row">
 		<div class="col-md-3">
-			<ul>
+			<ul class="list-unstyled mail-list">
 				<li ng-repeat="message in messages | filter:filterText">{{ message }}</li>
 			</ul>
 		</div>
