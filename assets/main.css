@@ -1,6 +1,7 @@
 .mail-list {
 	overflow: scroll;
 	height: 650px;
+	box-shadow: 0 0 200px black inset;
 }
 
 .mail-list-item {
