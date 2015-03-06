@@ -1,7 +1,14 @@
 <h2>Inbox</h2>
 Filter : <input type="text" ng-model="filterText">
 <div ng-controller='InboxCtrl'>
-	<ul>
-		<li ng-repeat="message in messages | filter:filterText">{{ message }}</li>
-	</ul>
+	<div class="row">
+		<div class="col-md-3">
+			<ul>
+				<li ng-repeat="message in messages | filter:filterText">{{ message }}</li>
+			</ul>
+		</div>
+		<div class="col-md-9">
+			Vestibulum eget quam risus. Morbi porta, diam sed viverra auctor, tortor orci bibendum lacus, feugiat varius nulla nibh ac eros. Sed suscipit, nulla sit amet feugiat faucibus, dolor metus suscipit elit, vel finibus nisi sapien vel magna. Phasellus ullamcorper tempus tortor ac facilisis. Vivamus id pulvinar arcu, eu mattis diam. Curabitur vitae enim luctus lacus fermentum egestas et eget dolor. Proin quam arcu, consectetur vitae risus et, accumsan tincidunt massa. Nulla sed dictum nisl. Praesent dictum eros ut est rutrum, ut dapibus dui pellentesque. In hac habitasse platea dictumst. Proin dapibus turpis arcu, a hendrerit sem rutrum in. Quisque dictum mollis nisi nec laoreet. Nullam vestibulum porttitor accumsan. Proin semper erat nisi, auctor rhoncus eros scelerisque ac. Phasellus vehicula justo pellentesque, egestas velit vel, tempus risus. Donec non dolor arcu.
+		</div>
+	</div>
 </div>
