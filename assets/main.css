@@ -1,7 +1,6 @@
 .mail-list {
 	overflow: scroll;
 	height: 650px;
-	box-shadow: 0 0 200px black inset;
 }
 
 .mail-list-item {
@@ -10,6 +9,15 @@
 	padding: 0.3em;
 }
 
+.mail-list-anchor:link {
+	text-decoration: none;
+}
+
 .mail-list>a:last-child>.mail-list-item {
 	border-bottom: none;
+}
+
+.selected {
+	background-color: #5bc0de;
+	color: white;
 }
