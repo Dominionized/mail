@@ -1,19 +1,46 @@
-<h2>Inbox</h2>
+<h1>Inbox</h1>
 <div class="form-inline">
-	<div class="form-group">
-		<label>Filter</label>
-		<input type="text" ng-model="filterText" class="form-control">
-	</div>
+	<form>
+		<div class="form-group">
+			<label>Filter</label>
+			<input type="text" ng-model="filterText" class="form-control">
+		</div>
+	</form>
 </div>
 <div ng-controller='InboxCtrl'>
 	<div class="row">
-		<div class="col-md-3">
-			<ul class="list-unstyled mail-list">
-				<li ng-repeat="message in messages | filter:filterText">{{ message }}</li>
-			</ul>
+		<div class="col-md-3 mail-list">
+			<a href="" ng-repeat="message in messages | filter:filterText">
+				<div class="mail-list-item">
+					<h4>{{ message }}</h4>
+					<small>{{ message }}</small>
+				</div>
+			</a>
 		</div>
-		<div class="col-md-9">
-			Vestibulum eget quam risus. Morbi porta, diam sed viverra auctor, tortor orci bibendum lacus, feugiat varius nulla nibh ac eros. Sed suscipit, nulla sit amet feugiat faucibus, dolor metus suscipit elit, vel finibus nisi sapien vel magna. Phasellus ullamcorper tempus tortor ac facilisis. Vivamus id pulvinar arcu, eu mattis diam. Curabitur vitae enim luctus lacus fermentum egestas et eget dolor. Proin quam arcu, consectetur vitae risus et, accumsan tincidunt massa. Nulla sed dictum nisl. Praesent dictum eros ut est rutrum, ut dapibus dui pellentesque. In hac habitasse platea dictumst. Proin dapibus turpis arcu, a hendrerit sem rutrum in. Quisque dictum mollis nisi nec laoreet. Nullam vestibulum porttitor accumsan. Proin semper erat nisi, auctor rhoncus eros scelerisque ac. Phasellus vehicula justo pellentesque, egestas velit vel, tempus risus. Donec non dolor arcu.
+		<div class="col-md-9 email-content">
+			<form class="pull-right">
+				<div class="form-inline">
+					<div class="form-group">
+						<label>Text size</label>
+						<div class="btn-group">
+							<button class="btn btn-default form-control">A<sup>-</sup></button>
+							<button class="btn btn-default form-control">A<sup>+</sup></button>
+						</div>
+					</div>
+				</div>
+			</form>
+			<h2>E-mail object</h2>
+			<h4>From : Dominique Bégin (dominique.begin.0@gmail.com)</h4>
+			<p>
+				Vestibulum eget quam risus. Morbi porta, diam sed viverra auctor, tortor orci bibendum lacus, feugiat varius nulla nibh ac eros. Sed suscipit, nulla sit amet feugiat faucibus, dolor metus suscipit elit, vel finibus nisi sapien vel magna. Phasellus ullamcorper tempus tortor ac facilisis. Vivamus id pulvinar arcu, eu mattis diam. Curabitur vitae enim luctus lacus fermentum egestas et eget dolor. Proin quam arcu, consectetur vitae risus et, accumsan tincidunt massa. Nulla sed dictum nisl. Praesent dictum eros ut est rutrum, ut dapibus dui pellentesque. In hac habitasse platea dictumst. Proin dapibus turpis arcu, a hendrerit sem rutrum in. Quisque dictum mollis nisi nec laoreet. Nullam vestibulum porttitor accumsan. Proin semper erat nisi, auctor rhoncus eros scelerisque ac. Phasellus vehicula justo pellentesque, egestas velit vel, tempus risus. Donec non dolor arcu.
+			</p>
+			<form>
+				<div class="form-group">
+					<label for="quick-reply-textarea">Quick-reply</label>
+					<textarea class="form-control" id="quick-reply-textarea"></textarea>
+					<button class="btn btn-default" type="submit">Send</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
