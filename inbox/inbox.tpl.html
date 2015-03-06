@@ -23,15 +23,15 @@
 					<div class="form-group">
 						<label>Text size</label>
 						<div class="btn-group">
-							<button class="btn btn-default form-control">A<sup>-</sup></button>
-							<button class="btn btn-default form-control">A<sup>+</sup></button>
+							<button class="btn btn-default form-control" ng-click="decrementTextSize()">A<sup>-</sup></button>
+							<button class="btn btn-default form-control" ng-click="incrementTextSize()">A<sup>+</sup></button>
 						</div>
 					</div>
 				</div>
 			</form>
 			<h2>{{ messages[currentEmailIndex].subject }}</h2>
 			<h4>From : {{ messages[currentEmailIndex].from_name }} ({{ messages[currentEmailIndex].from_email }})</h4>
-			<p>{{ messages[currentEmailIndex].content }}</p>
+			<p style="font-size: {{ textSize }}em">{{ messages[currentEmailIndex].content }}</p>
 			<form>
 				<div class="form-group">
 					<label for="quick-reply-textarea">Quick-reply</label>

@@ -98,4 +98,18 @@ inbox.controller('InboxCtrl', function($scope){
 	$scope.setEmailContent = function($index){
 		$scope.currentEmailIndex = $index;
 	}
+
+	$scope.textSize = 1;
+
+	$scope.incrementTextSize = function(){
+		if ($scope.textSize <= 2){
+			$scope.textSize += 0.1;
+		}
+	}
+
+	$scope.decrementTextSize = function(){
+		if ($scope.textSize >= 0.8){
+			$scope.textSize -= 0.1;
+		}
+	}
 });
