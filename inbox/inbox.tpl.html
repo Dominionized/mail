@@ -1,6 +1,7 @@
 <h2>Inbox</h2>
+Filter : <input type="text" ng-model="filterText">
 <div ng-controller='InboxCtrl'>
-	<ul ng-repeat='message in messages'>
-		<li>{{ message }}</li>
+	<ul>
+		<li ng-repeat="message in messages | filter:filterText">{{ message }}</li>
 	</ul>
 </div>
